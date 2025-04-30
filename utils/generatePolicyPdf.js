@@ -46,7 +46,7 @@ export function generatePolicyPdf(data, userId) {
       doc.text(`Registration Date: ${data.registration_date}`);
       doc.text(`Expiry Date: ${data.expiry_date}`);
       doc.moveDown();
-      doc.fontSize(14).text(`💵 Price: 100 USD`, { align: 'right' });
+      doc.fontSize(14).text(`Price: 100 USD`, { align: 'right' });
     } catch (err) {
       console.error('Помилка при додаванні даних у PDF:', err);
       return reject('Не вдалося додати дані до PDF.');
