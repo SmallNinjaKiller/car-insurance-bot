@@ -36,15 +36,11 @@ export function generatePolicyPdf(data, userId) {
 
     // Додаємо дані до полісу
     try {
-      doc.fontSize(12).text(`Owner: ${data.owner}`);
       doc.text(`Car Number: ${data.car_number}`);
       doc.text(`Vehicle Type: ${data.vehicle_type}`);
       doc.text(`Manufacture Year: ${data.manufacture_year}`);
       doc.text(`Brand/Model: ${data.brand_model}`);
       doc.text(`VIN: ${data.vin}`);
-      doc.text(`Registration Place: ${data.registration_place}`);
-      doc.text(`Registration Date: ${data.registration_date}`);
-      doc.text(`Expiry Date: ${data.expiry_date}`);
       doc.moveDown();
       doc.fontSize(14).text(`Price: 100 USD`, { align: 'right' });
     } catch (err) {
